@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Um pequeno desafio interativo sobre o mundo dos gatos.">
+  <title>Mundo dos Gatos | Desafio Felino</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="#" aria-label="Mundo dos Gatos - início"><span class="marca-icone">🐾</span> Mundo dos Gatos</a>
+    <span class="topo-frase">Conhecimento com um toque de fofura</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-texto">
+        <span class="etiqueta">🐱 CENTRAL DE MISSÕES FELINAS</span>
+        <h1>Você conhece mesmo<br><span>o universo dos gatos?</span></h1>
+        <p>Responda a perguntas, descubra curiosidades e complete pequenas missões para se tornar um verdadeiro especialista em felinos.</p>
+      </div>
+      <div class="ilustracao" aria-hidden="true">
+        <div class="sol"></div>
+        <div class="gato">🐈</div>
+        <span class="estrela estrela-1">✦</span><span class="estrela estrela-2">✧</span>
+        <span class="patinha">🐾</span>
+      </div>
+    </section>
+
+    <section class="painel" aria-live="polite">
+      <div id="tela-inicial" class="tela">
+        <div class="icone-grande">🐈‍⬛</div>
+        <h2>Uma aventura começa com um miado!</h2>
+        <p>Prepare-se para responder a <strong>5 perguntas</strong> sobre comportamento, cuidados e curiosidades dos gatos.</p>
+        <div class="detalhes">
+          <span>⏱️ Sem limite de tempo</span>
+          <span>⭐ 5 desafios</span>
+          <span>💡 Aprenda brincando</span>
+        </div>
+        <button id="botao-iniciar" class="botao botao-principal">Começar missão <span>→</span></button>
+      </div>
+
+      <div id="tela-jogo" class="tela escondida">
+        <div class="linha-progresso">
+          <span id="numero-pergunta">Pergunta 1 de 5</span>
+          <span id="pontuacao">⭐ 0 pontos</span>
+        </div>
+        <div class="barra"><div id="progresso" class="barra-preenchida"></div></div>
+        <p id="nome-missao" class="nome-missao">MISSÃO FELINA</p>
+        <h2 id="pergunta" class="pergunta">Carregando pergunta...</h2>
+        <div id="alternativas" class="alternativas"></div>
+        <p id="feedback" class="feedback" role="status"></p>
+        <button id="botao-proxima" class="botao botao-principal escondida">Próxima pergunta <span>→</span></button>
+      </div>
+
+      <div id="tela-final" class="tela escondida">
+        <div id="emoji-final" class="icone-grande">🏆</div>
+        <p class="nome-missao">MISSÃO CONCLUÍDA</p>
+        <h2 id="titulo-final">Muito bem!</h2>
+        <p id="mensagem-final">Você concluiu o desafio.</p>
+        <div class="resultado"><strong id="resultado-pontos">0/5</strong><span>respostas corretas</span></div>
+        <p id="curiosidade-final" class="curiosidade-final"></p>
+        <button id="botao-reiniciar" class="botao botao-principal">Jogar novamente <span>↻</span></button>
+      </div>
+    </section>
+
+    <section class="dica">
+      <span class="dica-icone">💛</span>
+      <div><strong>Uma dica importante</strong><p>Cuidar de um gato envolve carinho, alimentação adequada, água fresca, ambiente seguro e acompanhamento veterinário.</p></div>
+    </section>
+  </main>
+
+  <footer>Feito com carinho por quem ama gatos <span>♥</span> | Projeto educativo de JavaScript</footer>
+</body>
+</html>

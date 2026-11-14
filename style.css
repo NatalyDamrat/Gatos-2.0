@@ -1,0 +1,60 @@
+* { box-sizing: border-box; }
+:root {
+  --marrom: #49352e; --laranja: #d97845; --laranja-escuro: #b95d31;
+  --creme: #fff9f1; --rosa: #f8e5d9; --texto: #5e514b; --verde: #527b61;
+}
+body { margin: 0; min-height: 100vh; font-family: 'Nunito', Arial, sans-serif; color: var(--marrom); background: #fbf3e9; }
+.topo { height: 74px; padding: 0 max(6vw, 24px); display: flex; align-items: center; justify-content: space-between; background: #fffaf4; border-bottom: 1px solid #f0e4d8; }
+.marca { color: var(--marrom); font-weight: 900; font-size: 1.15rem; text-decoration: none; }
+.marca-icone { color: var(--laranja); margin-right: 8px; font-size: 1.4rem; }
+.topo-frase { color: #9b887c; font-size: .9rem; }
+.container { width: min(920px, 90%); margin: 42px auto 30px; }
+.hero { min-height: 245px; display: flex; align-items: center; justify-content: space-between; padding: 28px 48px; overflow: hidden; border-radius: 24px; background: #f3dfcf; }
+.hero-texto { max-width: 560px; position: relative; z-index: 1; }
+.etiqueta, .nome-missao { color: var(--laranja-escuro); letter-spacing: 1.6px; font-size: .72rem; font-weight: 900; }
+h1 { font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.08; margin: 14px 0; letter-spacing: -1.5px; }
+h1 span { color: var(--laranja-escuro); }
+.hero p { max-width: 520px; color: #78645a; line-height: 1.6; margin-bottom: 0; }
+.ilustracao { width: 210px; height: 190px; position: relative; flex-shrink: 0; display: grid; place-items: center; }
+.sol { position: absolute; width: 150px; height: 150px; border-radius: 50%; background: #edbd91; }
+.gato { position: relative; z-index: 1; font-size: 8rem; filter: drop-shadow(0 8px 4px #a66b4930); }
+.estrela, .patinha { position: absolute; z-index: 2; color: #bd754c; }
+.estrela-1 { top: 12px; right: 24px; font-size: 2rem; }.estrela-2 { left: 10px; top: 55px; font-size: 1.7rem; }.patinha { bottom: 5px; right: 5px; font-size: 1.7rem; }
+.painel { margin: 26px auto; padding: 34px; background: #fffdfa; border: 1px solid #f0e5dc; border-radius: 22px; box-shadow: 0 12px 35px #79543b0b; min-height: 360px; }
+.tela { text-align: center; max-width: 650px; margin: 0 auto; }
+.escondida { display: none !important; }
+.icone-grande { font-size: 3.5rem; margin-bottom: 8px; }
+h2 { font-size: 1.65rem; margin: 8px 0 12px; }
+.tela > p:not(.nome-missao):not(.feedback) { color: var(--texto); line-height: 1.6; }
+.detalhes { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 22px 0; }
+.detalhes span { background: #fbf0e6; color: #826b5c; padding: 8px 13px; border-radius: 30px; font-size: .83rem; font-weight: 700; }
+.botao { border: 0; border-radius: 12px; padding: 13px 22px; font: 800 1rem 'Nunito', sans-serif; cursor: pointer; transition: transform .2s, background .2s; }
+.botao:hover { transform: translateY(-2px); }
+.botao:focus-visible, .opcao:focus-visible { outline: 3px solid #e9a77d; outline-offset: 3px; }
+.botao-principal { background: var(--laranja); color: white; box-shadow: 0 5px 0 #b95d31; }
+.botao-principal:hover { background: var(--laranja-escuro); }
+.botao span { margin-left: 12px; font-size: 1.2rem; }
+.linha-progresso { display: flex; justify-content: space-between; color: #8c796d; font-size: .88rem; font-weight: 800; }
+.barra { height: 9px; background: #f3e9df; border-radius: 20px; overflow: hidden; margin: 12px 0 28px; }
+.barra-preenchida { width: 0; height: 100%; background: #df8b5b; border-radius: inherit; transition: width .3s; }
+.pergunta { margin: 12px 0 22px; }
+.alternativas { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.opcao { padding: 14px; border: 1px solid #eadbd0; background: #fffaf5; color: #59483f; border-radius: 12px; font: 700 .95rem 'Nunito', sans-serif; cursor: pointer; text-align: left; transition: .2s; }
+.opcao:hover:not(:disabled) { border-color: #d97845; background: #fff2e8; }
+.opcao:disabled { cursor: default; opacity: .85; }
+.opcao.correta { background: #e8f2e9; border-color: #78a783; color: #315c3d; }
+.opcao.errada { background: #fae9e5; border-color: #d58a7c; color: #8b4035; }
+.feedback { min-height: 27px; font-weight: 800; color: var(--verde); margin: 16px 0; }
+.feedback.erro { color: #a34d40; }
+#botao-proxima { margin-top: 4px; }
+.resultado { display: flex; flex-direction: column; margin: 20px auto; padding: 18px; max-width: 190px; border-radius: 16px; background: #fbf0e6; }
+.resultado strong { color: var(--laranja-escuro); font-size: 2.2rem; }.resultado span { color: #8b776a; font-size: .85rem; }
+.curiosidade-final { padding: 14px; background: #f5eee5; border-radius: 12px; color: #725f53; line-height: 1.5; }
+.dica { display: flex; align-items: center; gap: 16px; padding: 18px 22px; border-radius: 16px; background: #e9eee5; color: #50664f; }
+.dica-icone { font-size: 1.8rem; }.dica strong { font-size: .95rem; }.dica p { margin: 3px 0 0; font-size: .88rem; line-height: 1.5; }
+footer { text-align: center; color: #a08d80; padding: 22px; font-size: .82rem; } footer span { color: #d97845; }
+@media (max-width: 650px) {
+  .topo { height: 64px; }.topo-frase { display: none; }.container { margin-top: 22px; }
+  .hero { padding: 28px 24px; min-height: auto; }.ilustracao { width: 105px; height: 130px; }.sol { width: 100px; height: 100px; }.gato { font-size: 5rem; }
+  .painel { padding: 25px 18px; }.alternativas { grid-template-columns: 1fr; }.linha-progresso { font-size: .78rem; }
+}
